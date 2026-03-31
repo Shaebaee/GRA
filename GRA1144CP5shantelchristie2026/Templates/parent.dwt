@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Summer Walker | Home | Shantel Christie, 2026</title>
+<!-- TemplateEndEditable -->
+
+<link href="styles.css" rel="stylesheet" type="text/css">
+
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+</head>
+
+<body>
+
+<div id="wrapper">
+
+  
+  <header>
+    <img src="logo.png" alt="Summer Walker logo" class="logo">
+   
+  </header>
+
+  
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="music.html">Store</a></li>
+      <li><a href="videos.html">Visuals</a></li>
+      <li><a href="concerts.html">Concerts</a></li>
+      <li><a href="photo.html">Photos</a></li>
+      <li><a href="mail.html">Mailings</a></li>
+      <li><a href="merch.html">Merch</a></li>
+      <li><a href="blog.html">Thoughts</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+    </ul>
+  </nav>
+
+  <!-- TemplateBeginEditable name="EditRegion1" -->
+  <main>
+
+    <section class="hero">
+
+      
+      <div class="hero-image">
+        <img src="stilloverit.jpeg" alt="Still Over It album cover">
+      </div>
+
+      
+      <div class="hero-text">
+        <h2>Still Over It</h2>
+
+        <p class="quote">
+          for the girls who feel everything deeply and still choose themselves.
+        </p>
+
+        <p>
+          A digital diary inspired by Summer Walker’s Still Over It era—soft,
+          feminine, intimate, and emotionally elegant.
+        </p>
+      </div>
+
+    </section>
+
+  </main>
+  <!-- TemplateEndEditable -->
+
+ 
+  <footer>
+    © 2026, Shantel Christie. <br>
+    This is a fictitious web page created solely for the purpose of education
+    and training. All products and people associated with this web page are
+    also fictitious. Any resemblance to real brands, products, or people is
+    purely coincidental.
+  </footer>
+
+</div>
+
+</body>
+</html>

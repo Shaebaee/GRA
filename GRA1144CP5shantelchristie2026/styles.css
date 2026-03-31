@@ -1,0 +1,715 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ccc;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#wrapper {
+    width: 1366px;
+    display: block;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+header {
+    width: 1366px;
+    height: 220px;
+    background-color: #F8D7DA;
+    color: black;
+    text-align: center;
+    padding-top: 30px;
+    box-sizing: border-box;
+}
+
+.logo {
+    max-width: 450px;
+    height: auto;
+    display: block;
+    margin: 0 auto 15px auto;
+}
+
+header h1 {
+    font-size: 42px;
+    font-weight: bold;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+nav {
+    width: 1366px;
+    background-color: #222;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    display: block;
+    padding: 18px 20px;
+    color: #F8D7DA;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: "Petit Formal Script", cursive;
+}
+
+nav ul li a:hover {
+    background-color: whitesmoke;
+    color: #000;
+}
+main {
+    width: 1366px;
+    min-height: 50px;
+    padding: 60px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+main h2 {
+    font-size: 32px;
+    color: #222;
+    margin-top: 0;
+}
+
+main p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #444;
+}
+.hero {
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    gap: 60px;
+    padding-top: 20px;
+}
+
+.hero-image img {
+    width: 360px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(110, 75, 75, 0.20);
+    transform: rotate(-4deg) translateY(-10px);
+    animation: floatAlbum 4s ease-in-out infinite;
+	margin-top: -100px;
+	
+}
+
+.hero-text {
+    max-width: 480px;
+	opacity: 0.8;
+    margin-top: -160px;
+}
+
+.hero-text h2 {
+    font-family: "Petit Formal Script", cursive;
+    font-size: 64px;
+    color: #6E4B4B;
+    margin-bottom: 20px;
+	text-shadow: 0 0 10px rgba(185, 142, 134, 0.4);
+}
+
+.hero-text .quote {
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-size: 30px;
+    color: #B98E86;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #5E4A47;
+	font-family:"Covered By Your Grace", cursive;
+}
+
+@keyframes floatAlbum {
+    0% { transform: rotate(-4deg) translateY(0px); }
+    50% { transform: rotate(-4deg) translateY(-10px); }
+    100% { transform: rotate(-4deg) translateY(0px); }
+}
+
+.tour-hero {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #111;
+}
+
+.tour-hero img {
+    width: 700px;
+    max-width: 90%;
+    border-radius: 12px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+}
+
+.tour-intro {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #1a1a1a;
+    color: #F8F1ED;
+}
+
+.tour-intro h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 36px;
+    margin-bottom: 10px;
+	color: #F8D7DA;
+}
+
+.tour-intro p {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.6;
+	font-family: "Petit Formal Script", cursive;
+}
+
+
+.tour-dates {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 60px 20px;
+    background-color: #111;
+}
+
+.date {
+    background-color: #222;
+    padding: 20px 30px;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.date span {
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+}
+
+.date p {
+    margin: 5px 0 0;
+    font-size: 16px;
+}
+
+.date:hover {
+    background-color: #B98E86;
+    transform: translateY(-5px);
+	box-shadow: 0 10px 30px rgba(185, 142, 134, 0.4);
+}
+.tickets a {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 30px;
+    background-color: #B98E86;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+	
+}
+.tickets {
+    background-color: #111; 
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.tickets a:hover {
+    background-color: #a1766e;
+	box-shadow: 0 10px 30px rgba(185, 142, 134, 0.4);
+}
+
+.privacy-page {
+    background-color: #F8F1ED;
+    padding: 70px 0;
+}
+
+.privacy-content {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 50px 60px;
+    background-color: #fffaf8;
+    border-radius: 14px;
+    box-shadow: 0 8px 30px rgba(110, 75, 75, 0.10);
+}
+
+.privacy-content h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 48px;
+    color: #6E4B4B;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.privacy-content h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+    color: #B98E86;
+    margin-top: 35px;
+    margin-bottom: 10px;
+}
+
+.privacy-content p {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #4f3d3d;
+    margin-bottom: 16px;
+}
+.merch-title {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 60px 80px;
+}
+
+.merch-title h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 48px;
+    font-style: italic;
+}
+
+.merch-title .line {
+    flex: 1;
+    height: 1px;
+    background-color: #444;
+}
+
+.merch-title a {
+    text-decoration: none;
+    color: #333;
+}
+.merch-row {
+    display: flex;
+    justify-content: space-around;
+    padding: 60px 80px;
+    text-align: left;
+}
+.item {
+    width: 280px;
+}
+.item img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.item h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 18px;
+    border-top: 1px solid #333;
+    padding-top: 10px;
+}
+
+.item p {
+    margin: 5px 0;
+}
+
+.item a {
+    text-decoration: none;
+    float: right;
+}
+.photos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.photos img {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 8px 22px rgba(110, 75, 75, 0.15);
+    transition: 0.3s;
+}
+
+.photos img:hover {
+    transform: scale(1.05);
+}
+.gallery-header h2 {
+    font-family:"Petit Formal Script", cursive;
+    font-size: 48px;
+    color: #6E4B4B;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.gallery-header p {
+    font-family: "Covered By Your Grace", cursive;
+    font-size: 22px;
+    color: #B98E86;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.thoughts-page {
+    background-color: #F8F1ED;
+    padding: 70px 40px;
+}
+
+.thoughts-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.thoughts-header h2 {
+    font-family: "Petit Formal Script", cursive;
+    font-size: 48px;
+    color: #6E4B4B;
+    margin-bottom: 10px;
+}
+
+.thoughts-header p {
+    font-family: "Petit Formal Script", cursive;
+    font-size: 24px;
+    color: #B98E86;
+}
+
+.thoughts-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.thought-card {
+    width: 320px;
+    background-color: #fffaf8;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(110, 75, 75, 0.12);
+    text-align: left;
+}
+
+.thought-card h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+    color: #6E4B4B;
+    margin-bottom: 8px;
+}
+
+.thought-card .date {
+    font-size: 16px;
+    color: #B98E86;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.thought-card p {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 20px;
+    line-height: 1.7;
+    color: #4f3d3d;
+}
+
+.thought-card a {
+    display: inline-block;
+    margin-top: 15px;
+    color: #B98E86;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.thought-card a:hover {
+    color: #6E4B4B;
+}
+.merch-header h2 {
+    letter-spacing: 2px;
+	font-family: "Petit Formal Script", cursive;
+	font-size: 38px;
+}
+.merch-page {
+    background-color: #F8F1ED;
+    padding: 70px 40px;
+}
+
+.merch-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.merch-header h2 {
+    font-family: "Petit Formal Script", cursive;
+    font-size: 48px;
+    color: #6E4B4B;
+    margin-bottom: 12px;
+    letter-spacing: 2px;
+}
+
+.merch-header p {
+    font-family: "Covered By Your Grace", cursive;
+    font-size: 24px;
+    color: #B98E86;
+}
+
+.merch-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    width: 300px;
+    background-color: #fffaf8;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(110, 75, 75, 0.12);
+    padding: 25px;
+    text-align: center;
+}
+
+.product-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 18px;
+}
+
+.product-card h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+    color: #6E4B4B;
+    margin-bottom: 8px;
+}
+
+.product-card .price {
+    font-size: 20px;
+    color: #B98E86;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #4f3d3d;
+}
+
+.product-card a {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 12px 24px;
+    background-color: #B98E86;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.product-card a:hover {
+    background-color: #8d6660;
+}
+.news-page {
+    background-color: #F8F1ED;
+    padding: 70px 40px;
+}
+
+.news-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.news-header h2 {
+    font-family: "Petit Formal Script", cursive;
+    font-size: 48px;
+    color: #6E4B4B;
+    margin-bottom: 10px;
+}
+
+.news-header p {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 24px;
+    color: #B98E86;
+}
+
+.news-list {
+    max-width: 950px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.news-card {
+    background-color: #fffaf8;
+    padding: 30px 35px;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(110, 75, 75, 0.12);
+}
+
+.news-date {
+    font-size: 16px;
+    color: #B98E86;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.news-card h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+    color: #6E4B4B;
+    margin-bottom: 12px;
+}
+
+.news-card p {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 20px;
+    line-height: 1.7;
+    color: #4f3d3d;
+}
+
+.news-card a {
+    display: inline-block;
+    margin-top: 14px;
+    color: #B98E86;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.news-card a:hover {
+    color: #6E4B4B;
+}
+
+.visuals-page {
+    background-color: #111;
+	padding: 70px 40px;
+}
+
+.visuals-header {
+    text-align: center;
+    margin-bottom: 50px;
+    color: #F8F1ED;
+}
+
+.visuals-header h2 {
+    font-family: "Petit Formal Script", cursive;
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.visuals-header p {
+    font-family: "Petit Formal Script", cursive;
+    font-size: 24px;
+    color: #B98E86;
+}
+
+.video-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.video-card {
+    width: 320px;
+    text-align: center;
+}
+
+.video-card iframe {
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.video-card h3 {
+    margin-top: 10px;
+    font-family: "Playfair Display", serif;
+    color: #F8F1ED;
+}
+.video-container{
+	display: flex;
+	justify-content: center;
+	margin-top: 40px;
+} 
+.video-container iframe{
+	width:600px;
+	height: 340px;
+	border-radius: 12px;
+}
+.video-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.video-wrapper iframe {
+    width: 650px;
+    height: 370px;
+    border-radius: 12px;
+}
+.mailings-page {
+    background-color: #F8F1ED;
+    padding: 100px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.mailings-container {
+    text-align: center;
+    max-width: 500px;
+	margin: 0 auto;
+}
+
+.mailings-container h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 48px;
+    color: #6E4B4B;
+    margin-bottom: 15px;
+}
+
+.mailings-container p {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 22px;
+    color: #B98E86;
+    margin-bottom: 40px;
+}
+
+.mail-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.mail-form input {
+    padding: 14px;
+    border-radius: 30px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+.mail-form button {
+    padding: 14px;
+    border-radius: 30px;
+    border: none;
+    background-color: #B98E86;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.mail-form button:hover {
+    background-color: #8d6660;
+}
+footer {
+    width: 1366px;
+    background-color: #111;
+    color: #fff;
+    padding: 25px 40px;
+    box-sizing: border-box;
+    font-size: 15px;
+    line-height: 1.3;
+    text-align: center;
+}
