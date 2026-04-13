@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hot Gyal Brand | Swimwear | Shantel Christie, 2026</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #f5f1f3;
+    --panel: #fbf6f8;
+    --soft-pink: #f8e8ef;
+    --pink: #e39adb;
+    --yellow: #f5ea00;
+    --blue: #a8cfdf;
+    --text: #1c1719;
+    --muted: #6b5d63;
+    --shadow: 0 14px 35px rgba(0, 0, 0, 0.08);
+    --radius: 28px;
+}
+
+body {
+    background:
+        radial-gradient(circle at top left, rgba(255, 198, 222, 0.35), transparent 20%),
+        radial-gradient(circle at bottom right, rgba(255, 210, 190, 0.18), transparent 20%),
+        linear-gradient(to bottom, #fff9fb, #f4eef1);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+}
+
+.wrapper {
+    max-width: 1380px;
+    margin: 0 auto;
+    padding: 22px;
+}
+	
+header {
+    background: rgba(255, 240, 246, 0.92);
+    border-radius: 32px;
+    padding: 26px 30px;
+    margin-bottom: 28px;
+    box-shadow: var(--shadow);
+}
+
+.header-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    text-align: center;
+}
+
+.header-center img {
+    height: 72px;
+    width: auto;
+    display: block;
+}
+
+.header-center h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 3.8vw, 3.2rem);
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: -0.02em;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    margin-top: 14px;
+    font-size: 0.95rem;
+}
+
+.top-nav a {
+    text-decoration: none;
+    color: var(--muted);
+    font-weight: 500;
+    transition: 0.2s ease;
+}
+
+.top-nav a:hover {
+    color: #000;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 28px;
+    align-items: stretch;
+}
+
+#product {
+    position: relative;
+    min-height: 760px;
+    background: #f0dde4;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+#product img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    inset: 0;
+    transition: opacity 0.25s ease;
+}
+
+#description {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 54px 44px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--muted);
+    font-size: 0.76rem;
+    margin-bottom: 14px;
+    font-weight: 600;
+}
+
+#description h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.4rem, 4vw, 4.1rem);
+    line-height: 0.95;
+    margin-bottom: 16px;
+}
+
+.tagline {
+    font-size: 1.15rem;
+    color: #41373b;
+    margin-bottom: 18px;
+}
+
+#description h3 {
+    font-size: 2rem;
+    margin-bottom: 28px;
+    font-weight: 700;
+}
+
+.product-copy {
+    color: var(--muted);
+    line-height: 1.7;
+    margin-bottom: 24px;
+    max-width: 34rem;
+}
+
+.swatch-title {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--muted);
+    font-weight: 600;
+    margin-bottom: 14px;
+}
+
+.swatches {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.swatches button {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    cursor: pointer;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.swatches button:hover,
+.swatches button.active {
+    transform: scale(1.08);
+    border-color: #222;
+}
+
+#cuteswatch { background: var(--pink); }
+#sexyswatch { background: var(--yellow); }
+#menswatch { background: var(--blue); }
+
+.details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-bottom: 30px;
+}
+
+.detail-box {
+    background: #fff8fb;
+    border: 1px solid #f0dde5;
+    border-radius: 18px;
+    padding: 16px;
+}
+
+.detail-box strong {
+    display: block;
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 8px;
+}
+
+.detail-box span {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+
+.button-row {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.shop-btn,
+.secondary-btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 15px 28px;
+    border-radius: 999px;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.shop-btn {
+    background: linear-gradient(to bottom, #ffd9e7, #f4b6cc);
+    color: #23181d;
+    box-shadow: 0 10px 24px rgba(236, 135, 173, 0.24);
+}
+
+.secondary-btn {
+    background: #fff;
+    color: var(--text);
+    border: 1px solid #ead5de;
+}
+
+.shop-btn:hover,
+.secondary-btn:hover {
+    transform: translateY(-2px);
+}
+
+.bottom-grid {
+    margin-top: 28px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.info-card {
+    background: rgba(255,255,255,0.78);
+    border-radius: 26px;
+    box-shadow: var(--shadow);
+    padding: 28px;
+}
+
+.info-card h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+}
+
+.info-card p {
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 28px;
+    background: rgba(255,255,255,0.72);
+    border-radius: 24px;
+    padding: 18px 24px;
+    text-align: center;
+    color: var(--muted);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.05);
+    font-size: 0.95rem;
+}
+
+@media (max-width: 980px) {
+    main,
+    .bottom-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #product {
+        min-height: 540px;
+    }
+
+    #description {
+        padding: 34px 24px;
+    }
+
+    .details {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .header-center {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .top-nav {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .swatches {
+        gap: 14px;
+    }
+}
+</style>
+
+<script>
+function MM_preloadImages() {
+    var d = document;
+    if (d.images) {
+        if (!d.MM_p) d.MM_p = [];
+        var i, j = d.MM_p.length, a = MM_preloadImages.arguments;
+        for (i = 0; i < a.length; i++) {
+            d.MM_p[j] = new Image;
+            d.MM_p[j++].src = a[i];
+        }
+    }
+}
+
+function MM_showHideLayers() {
+    var args = MM_showHideLayers.arguments;
+    for (var i = 0; i < (args.length - 2); i += 3) {
+        var obj = document.getElementById(args[i]);
+        if (obj) {
+            obj.style.visibility = (args[i + 2] === 'show') ? 'visible' : 'hidden';
+        }
+    }
+}
+
+function setActiveSwatch(buttonId) {
+    var buttons = document.querySelectorAll('.swatches button');
+    buttons.forEach(function(btn) {
+        btn.classList.remove('active');
+    });
+    document.getElementById(buttonId).classList.add('active');
+}
+</script>
+</head>
+
+<body onload="; MM_showHideLayers('Coverswim','','show','sexyswim','','hide','menswim','','hide'); setActiveSwatch('cuteswatch')">
+
+<div class="wrapper">
+
+    <header>
+        <div class="header-center">
+            <img src="Hotgyallogo.PNG" alt="Hot Gyal Brand Logo">
+            <h1>Hot Gyal Brand</h1>
+        </div>
+
+        <nav class="top-nav">
+            <a href="#shop">Shop</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main id="shop">
+        <section id="product">
+            <img src="swim1frnt.JPG" alt="Pink swimwear look" id="Coverswim">
+            <img src="swim2frnt.JPG" alt="Yellow swimwear look" id="sexyswim">
+            <img src="swim3rev.PNG" alt="Blue swimwear look" id="menswim">
+        </section>
+
+        <section id="description">
+            <div class="eyebrow">Summer Drop</div>
+            <h2>Swimwear</h2>
+            <p class="tagline">Embrace your hotness at Miami Jouvert.</p>
+            <h3>$30.00</h3>
+
+            <p class="product-copy">
+                Hot Gyal Brand is for you and your crew to get lit together in style. Designed for Miami Carnival and Jouvert, this collection is all about bold energy, confidence, and standing out wherever the vibe takes you.
+            </p>
+
+            <div class="swatch-title">Color options</div>
+            <div class="swatches">
+                <button id="cuteswatch" onclick="MM_showHideLayers('Coverswim','','show','sexyswim','','hide','menswim','','hide'); setActiveSwatch('cuteswatch');" aria-label="Pink option"></button>
+                <button id="sexyswatch" onclick="MM_showHideLayers('Coverswim','','hide','sexyswim','','show','menswim','','hide'); setActiveSwatch('sexyswatch');" aria-label="Yellow option"></button>
+                <button id="menswatch" onclick="MM_showHideLayers('Coverswim','','hide','sexyswim','','hide','menswim','','show'); setActiveSwatch('menswatch');" aria-label="Blue option"></button>
+            </div>
+
+            <div class="details">
+                <div class="detail-box">
+                    <strong>Style</strong>
+                    <span>Bold feminine</span>
+                </div>
+                <div class="detail-box">
+                    <strong>Fit</strong>
+                    <span>Statement look</span>
+                </div>
+                <div class="detail-box">
+                    <strong>Vibe</strong>
+                    <span>Hot girl energy</span>
+                </div>
+            </div>
+
+            <div class="button-row">
+                <a href="#" class="shop-btn">Shop Now</a>
+                <a href="#about" class="secondary-btn">Learn More</a>
+            </div>
+        </section>
+    </main>
+
+    <section class="bottom-grid" id="about">
+        <div class="info-card">
+            <h4>About the brand</h4>
+            <p>
+                Hot Gyal Brand is all about confidence, femininity, and standing out while being classy and sexy at the same time. Created by CEO Shantel Christie, the brand was born from a personal journey of rebuilding self-esteem after weight gain caused by PCOS. She wanted to create a brand that makes women feel beautiful, confident, and comfortable in whatever they wear.
+            </p>
+        </div>
+
+        <div class="info-card" id="contact">
+            <h4>Contact</h4>
+            <p>
+                Instagram: @hotgyalbrand<br>
+                Email: hotgyalbrand@email.com
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        Hot Gyal Brand | Swimwear | Shantel Christie, 2026
+    </footer>
+
+</div>
+</body>
+</html>
