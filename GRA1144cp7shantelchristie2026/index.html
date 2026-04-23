@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Travelocity | Shantel Christie, 2026</title>
+	<script src="https://kit.fontawesome.com/bc6b5ed97d.js" crossorigin="anonymous"></script>
+	<style>
+		body{
+    margin: 0;
+    background-image: url("Laucala-Island-Restaurant.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(114,201,229,1.00);
+		}
+		
+		wrapper{
+			width: 1366px;
+			margin:auto;
+			display:block;
+		}
+		header{
+    height: 100px;
+    background-color: rgba(253,251,251,0.50);
+		}
+	#Tabs1 ul {
+    background-color: transparent;
+    border: none;
+    background-image: none;
+}
+    #Tabs1 {
+    background-image: none;
+    background-color: rgba(255,255,255,0.50);
+}
+		#Tabs1 ul li{
+    text-align: center;		
+		
+		}
+		#Tabs1 ul li i{
+    color: rgba(111,165,229,1.00);
+		}
+		#tabs-1 div{
+			display:grid;
+			grid-template-columns: 16% 16% 16% 16% 16% 10%;
+			gap:10px;
+		}
+    .search {
+    background-color: rgba(230,241,111,1.00);
+}
+		
+    h1{
+		margin: 0;
+		padding:20px;
+}
+		.ui-tabs{
+    position: relative;
+    padding: .2em;
+    border: none;
+    background-color: transparent;
+}.ui-tabs .ui-tabs-nav{margin:0;padding:.2em .2em 0}.ui-tabs .ui-tabs-nav li{list-style:none;float:left;position:relative;top:0;margin:1px .2em 0 0;border-bottom-width:0;padding:0;white-space:nowrap}.ui-tabs .ui-tabs-nav .ui-tabs-anchor{float:left;padding:.5em 1em;text-decoration:none}.ui-tabs .ui-tabs-nav li.ui-tabs-active{margin-bottom:-1px;padding-bottom:1px}.ui-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor,.ui-tabs .ui-tabs-nav li.ui-state-disabled .ui-tabs-anchor,.ui-tabs .ui-tabs-nav li.ui-tabs-loading .ui-tabs-anchor{cursor:text}.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor{cursor:pointer}.ui-tabs .ui-tabs-panel{display:block;border-width:0;padding:1em 1.4em;background:none}
+		}
+		
+    </style>
+	<link href="../jQueryAssets/jquery.ui.core.min.css" rel="stylesheet" type="text/css">
+	<link href="../jQueryAssets/jquery.ui.theme.min.css" rel="stylesheet" type="text/css">
+	<link href="../jQueryAssets/jquery.ui.tabs.min.css" rel="stylesheet" type="text/css">
+<script src="../jQueryAssets/jquery-1.11.1.min.js"></script>
+<script src="../jQueryAssets/jquery.ui-1.10.4.tabs.min.js"></script>
+</head>
+<body>
+<header>
+  <wrapper>
+    <h1>Travelocity</h1>
+  </wrapper>
+</header>
+<div id="Tabs1">
+	  <ul>
+        <li><a href="#tabs-1"><i class="fa-solid fa-plane"></i>Flights</a></li>
+<li><a href="#tabs-2"><i class="fa-solid fa-hotel"></i>Hotels</a></li>
+<li><a href="#tabs-3"><i class="fa-solid fa-sailboat"></i>Rentals</a></li>
+<li><a href="#tabs-4"><i class="fa-solid fa-suitcase-rolling"></i>Packages</a></li>
+<li><a href="#tabs-5"><i class="fa-solid fa-umbrella-beach"></i>Activites</a></li>
+	  </ul>
+      <div id="tabs-1">
+        <p>Book your flights</p>
+		  <input type="text" placeholder="Leaving From"><input type="text" placeholder="Going to"><input type="date"><input type="date"><select>
+		    <option value="0">Number of Travelers</option>
+		    <option value="1">1</option>
+		    <option value="2">2</option>
+		    <option value="3">3</option>
+		    <option value="4">4</option>
+		    <option value="5">5</option>
+		    <option value="6">6</option>
+		    <option value="7">7</option>
+		    <option value="8">8</option>
+		    <option value="9">9</option>
+		    <option value="10">10</option>
+		  </select><input type="submit" class="search" value="Search">
+      </div>
+<div id="tabs-2">
+    <p>Find your hotels</p>
+      </div>
+<div id="tabs-3">
+  <p>Find your rental cars and boat</p>
+</div>
+<div id="tabs-4">
+  <p>Bundle and Save</p>
+</div>
+<div id="tabs-5">
+  <p>Find things to do</p>
+</div>
+</div>
+<wrapper>
+</wrapper>
+<script type="text/javascript">
+$(function() {
+	$( "#Tabs1" ).tabs(); 
+}); 
+    </script>
+</body>
+</html>
