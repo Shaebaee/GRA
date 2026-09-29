@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Hot Gyal Brand Responsive Layout</title>
+
+<style>
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f8f3ec;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #111111;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1366px;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+
+header {
+    background-color: #000000;
+    text-align: center;
+    padding: 20px;
+}
+
+.logo {
+    width: 150px;
+    max-width: 100%;
+}
+
+nav {
+    background-color: #990000;
+    text-align: center;
+    padding: 12px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: block;
+    margin: 10px 0;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+nav a:hover {
+    color: #d4af37;
+}
+
+.bow {
+    display: inline-block;
+    position: relative;
+    width: 45px;
+    height: 28px;
+    margin: 5px auto;
+}
+
+.bow-left,
+.bow-right {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-color: #d40000;
+
+    background-image:
+    radial-gradient(circle, white 3px, transparent 4px);
+
+    background-size: 12px 12px;
+    border: 2px solid #000000;
+}
+
+.bow-left {
+    left: 0;
+    transform: rotate(25deg);
+    border-radius: 70% 30% 70% 30%;
+}
+
+.bow-right {
+    right: 0;
+    transform: rotate(-25deg);
+    border-radius: 30% 70% 30% 70%;
+}
+
+.bow-center {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background-color: #000000;
+    border-radius: 50%;
+    left: 15px;
+    top: 7px;
+    z-index: 5;
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+    background-color: #000000;
+}
+
+.hero img {
+    width: 100%;
+    display: block;
+}
+
+.hero-text {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 30px 20px;
+}
+
+.hero-text h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2em;
+    margin: 0 0 10px 0;
+    letter-spacing: 2px;
+}
+
+.hero-text p {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.button {
+    display: inline-block;
+    background-color: #b00000;
+    color: #ffffff;
+    padding: 12px 25px;
+    margin-top: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.button:hover {
+    background-color: #d4af37;
+    color: #000000;
+}
+
+.collection {
+    padding: 30px 20px;
+}
+
+.collection h2 {
+    text-align: center;
+    font-family: Georgia, "Times New Roman", serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+
+.product-card {
+    background-color: #f8f3ec;
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 4px solid #990000;
+}
+
+.product-card img {
+    width: 100%;
+    display: block;
+}
+
+.product-card h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    text-transform: uppercase;
+    margin: 20px 10px 8px 10px;
+}
+
+.product-card p {
+    margin: 5px 15px;
+    line-height: 1.5;
+}
+
+.price {
+    color: #990000;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.brand-story {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 50px 25px;
+}
+
+.brand-story h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #d4af37;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.brand-story p {
+    max-width: 700px;
+    margin: 15px auto;
+    line-height: 1.8;
+}
+
+
+.polka-divider {
+    height: 40px;
+    background-color: #b00000;
+
+    background-image:
+    radial-gradient(circle, white 4px, transparent 5px);
+
+    background-size: 25px 25px;
+}
+
+footer {
+    background-color: #111111;
+    color: #ffffff;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+footer p {
+    font-size: .8em;
+    line-height: 1.5;
+    max-width: 900px;
+    margin: 10px auto;
+}
+
+footer .copyright {
+    color: #d4af37;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 32em) {
+
+    nav li {
+        display: inline-block;
+        margin: 5px 15px;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-text h1 {
+        font-size: 2.5em;
+    }
+
+}
+
+@media screen and (min-width: 64em) {
+
+    header {
+        padding: 25px;
+    }
+
+    .logo {
+        width: 180px;
+    }
+
+    nav li {
+        margin: 5px 25px;
+    }
+
+    .products {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .collection {
+        padding: 50px;
+    }
+
+    .hero-text h1 {
+        font-size: 3em;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<div class="wrapper">
+
+
+
+
+<header>
+
+    <img src="images/hot-gyal-logo.png"
+         alt="Hot Gyal Brand Logo"
+         class="logo">
+
+</header>
+
+<nav>
+
+<ul>
+
+    <li><a href="#">Shop</a></li>
+
+    <li><a href="#">Shoes</a></li>
+
+    <li>
+
+        <div class="bow">
+
+            <span class="bow-left"></span>
+
+            <span class="bow-center"></span>
+
+            <span class="bow-right"></span>
+
+        </div>
+
+    </li>
+
+    <li><a href="#">Bags</a></li>
+
+    <li><a href="#">About</a></li>
+
+</ul>
+
+</nav>
+
+<section class="hero">
+
+    <img src="images/rouge-obsession.jpg"
+         alt="Hot Gyal Rouge Obsession Shoe">
+
+    <div class="hero-text">
+
+        <h1>Made for the Bold.</h1>
+
+        <p>
+        Statement pieces made for the woman
+        who was never meant to blend in.
+        Bold. Feminine. Unforgettable.
+        Welcome to Hot Gyal Brand.
+        </p>
+
+        <a href="#collection"
+           class="button">
+
+           Shop the Collection
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+
+
+<div class="polka-divider"></div>
+
+
+
+
+<main>
+
+<section class="collection"
+         id="collection">
+
+<h2>Featured Collection</h2>
+
+
+<div class="products">
+
+
+
+<article class="product-card">
+
+    <img src="images/rouge-obsession.jpg"
+         alt="Rouge Obsession Red and Black Polka Dot Shoe">
+
+    <h3>Rouge Obsession</h3>
+
+    <p>
+    Red satin, black polka dots,
+    statement bows and a dramatic
+    spiked wedge heel.
+    </p>
+
+    <p class="price">
+        Hot Gyal Collection
+    </p>
+
+</article>
+
+
+
+
+<article class="product-card">
+
+    <img src="images/polka-dot-wedge.jpg"
+         alt="Hot Gyal Red White and Black Polka Dot Wedge">
+
+    <h3>Polka Dot Obsession</h3>
+
+    <p>
+    A playful red and white
+    polka-dot statement wedge
+    finished with black satin bows
+    and signature spikes.
+    </p>
+
+    <p class="price">
+        Hot Gyal Collection
+    </p>
+
+</article>
+
+
+<article class="product-card">
+
+    <img src="images/hot-gyal-bag.jpg"
+         alt="Hot Gyal Black Crossbody Bag">
+
+    <h3>Hot Gyal Crossbody</h3>
+
+    <p>
+    Black exterior, gold hardware
+    and a bold red polka-dot interior.
+    Outside timeless. Inside iconic.
+    </p>
+
+    <p class="price">
+        Made to be Remembered
+    </p>
+
+</article>
+
+
+</div>
+
+</section>
+
+
+<section class="brand-story">
+
+    <h2>Hot Gyal Energy</h2>
+
+    <p>
+    Hot Gyal Brand celebrates statement fashion,
+    confidence and individuality. Every piece is
+    designed to turn an outfit into a moment.
+    We don't follow the room. We enter it.
+    </p>
+
+</section>
+
+
+</main>
+
+
+
+<div class="polka-divider"></div>
+
+
+
+<footer>
+
+<p class="copyright">
+
+&copy; 2026 Shantel Christie
+
+</p>
+
+<p>
+
+This is a fictitious web page created solely for the
+purpose of education and training. All products and
+people associated with this web page are also fictitious.
+Any resemblance to real brands, products, or people is
+purely coincidental. Information provided about the
+product is also fictitious and should not be construed
+to be representative of actual products on the market
+in a similar product category.
+
+</p>
+
+</footer>
+
+
+</div>
+
+</body>
+
+</html>
