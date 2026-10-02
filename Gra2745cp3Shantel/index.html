@@ -10,7 +10,6 @@
 
 <style>
 
-
 * {
     box-sizing: border-box;
 }
@@ -32,13 +31,15 @@ body {
 
 header {
     background-color: #000000;
+    padding: 10px 30px;
     text-align: center;
-    padding: 20px;
 }
 
 .logo {
-    width: 150px;
+    width: 190px;
     max-width: 100%;
+    display: block;
+    margin: 0 auto;
 }
 
 nav {
@@ -116,15 +117,45 @@ nav a:hover {
 }
 
 .hero {
-    position: relative;
-    text-align: center;
     background-color: #000000;
+    text-align: center;
+    padding: 30px 20px;
+    overflow: hidden;
 }
 
-.hero img {
+.hero-showcase {
     width: 100%;
-    display: block;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 20px 0;
 }
+
+.hero-shoe {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+
+    animation: shoeFloat 4s ease-in-out infinite;
+}
+
+@keyframes shoeFloat {
+
+    0% {
+        transform: translateY(0px) rotate(-1deg);
+    }
+
+    50% {
+        transform: translateY(-18px) rotate(1deg);
+    }
+
+    100% {
+        transform: translateY(0px) rotate(-1deg);
+    }
+}
+
+
 
 .hero-text {
     background-color: #000000;
@@ -160,6 +191,19 @@ nav a:hover {
     background-color: #d4af37;
     color: #000000;
 }
+
+
+
+.polka-divider {
+    height: 40px;
+    background-color: #b00000;
+
+    background-image:
+    radial-gradient(circle, white 4px, transparent 5px);
+
+    background-size: 25px 25px;
+}
+
 
 .collection {
     padding: 30px 20px;
@@ -228,17 +272,6 @@ nav a:hover {
     line-height: 1.8;
 }
 
-
-.polka-divider {
-    height: 40px;
-    background-color: #b00000;
-
-    background-image:
-    radial-gradient(circle, white 4px, transparent 5px);
-
-    background-size: 25px 25px;
-}
-
 footer {
     background-color: #111111;
     color: #ffffff;
@@ -258,6 +291,12 @@ footer .copyright {
     font-weight: bold;
 }
 
+
+/* =========================
+   TABLET
+   MIN WIDTH: 32em
+========================= */
+
 @media screen and (min-width: 32em) {
 
     nav li {
@@ -275,14 +314,15 @@ footer .copyright {
 
 }
 
+
 @media screen and (min-width: 64em) {
 
     header {
-        padding: 25px;
+        padding: 15px;
     }
 
     .logo {
-        width: 180px;
+        width: 210px;
     }
 
     nav li {
@@ -301,6 +341,10 @@ footer .copyright {
         font-size: 3em;
     }
 
+    .hero-shoe {
+        max-width: 550px;
+    }
+
 }
 
 </style>
@@ -312,16 +356,16 @@ footer .copyright {
 
 <div class="wrapper">
 
-
-
-
 <header>
 
-    <img src="images/hot-gyal-logo.png"
+    <img src="newhgblogo.PNG"
          alt="Hot Gyal Brand Logo"
          class="logo">
 
 </header>
+
+
+
 
 <nav>
 
@@ -353,20 +397,26 @@ footer .copyright {
 
 </nav>
 
+
 <section class="hero">
 
-    <img src="images/rouge-obsession.jpg"
-         alt="Hot Gyal Rouge Obsession Shoe">
+    <div class="hero-showcase">
+
+        <img src="heroimg.PNG"
+             alt="Hot Gyal statement shoes"
+             class="hero-shoe">
+
+    </div>
 
     <div class="hero-text">
 
         <h1>Made for the Bold.</h1>
 
         <p>
-        Statement pieces made for the woman
-        who was never meant to blend in.
-        Bold. Feminine. Unforgettable.
-        Welcome to Hot Gyal Brand.
+            Statement pieces made for the woman
+            who was never meant to blend in.
+            Bold. Feminine. Unforgettable.
+            Welcome to Hot Gyal Brand.
         </p>
 
         <a href="#collection"
@@ -380,14 +430,7 @@ footer .copyright {
 
 </section>
 
-
-
-
-
 <div class="polka-divider"></div>
-
-
-
 
 <main>
 
@@ -400,18 +443,17 @@ footer .copyright {
 <div class="products">
 
 
-
 <article class="product-card">
 
-    <img src="images/rouge-obsession.jpg"
-         alt="Rouge Obsession Red and Black Polka Dot Shoe">
+    <img src="hgshoe2.PNG"
+         alt="Hot Gyal red and black shoe">
 
-    <h3>Rouge Obsession</h3>
+    <h3>Rouge Star</h3>
 
     <p>
-    Red satin, black polka dots,
-    statement bows and a dramatic
-    spiked wedge heel.
+        Red satin, black polka dots,
+        statement bows and a dramatic
+        spiked wedge heel.
     </p>
 
     <p class="price">
@@ -421,20 +463,18 @@ footer .copyright {
 </article>
 
 
-
-
 <article class="product-card">
 
-    <img src="images/polka-dot-wedge.jpg"
-         alt="Hot Gyal Red White and Black Polka Dot Wedge">
+    <img src="hgshoe.PNG"
+         alt="Hot Gyal polka dot shoe">
 
     <h3>Polka Dot Obsession</h3>
 
     <p>
-    A playful red and white
-    polka-dot statement wedge
-    finished with black satin bows
-    and signature spikes.
+        A playful red and white
+        polka-dot statement wedge
+        finished with black satin bows
+        and signature spikes.
     </p>
 
     <p class="price">
@@ -446,15 +486,15 @@ footer .copyright {
 
 <article class="product-card">
 
-    <img src="images/hot-gyal-bag.jpg"
-         alt="Hot Gyal Black Crossbody Bag">
+    <img src="hgbpurse.PNG"
+         alt="Hot Gyal purse">
 
     <h3>Hot Gyal Crossbody</h3>
 
     <p>
-    Black exterior, gold hardware
-    and a bold red polka-dot interior.
-    Outside timeless. Inside iconic.
+        Black exterior, gold hardware
+        and a bold red polka-dot interior.
+        Outside timeless. Inside iconic.
     </p>
 
     <p class="price">
@@ -468,16 +508,15 @@ footer .copyright {
 
 </section>
 
-
 <section class="brand-story">
 
     <h2>Hot Gyal Energy</h2>
 
     <p>
-    Hot Gyal Brand celebrates statement fashion,
-    confidence and individuality. Every piece is
-    designed to turn an outfit into a moment.
-    We don't follow the room. We enter it.
+        Hot Gyal Brand celebrates statement fashion,
+        confidence and individuality. Every piece is
+        designed to turn an outfit into a moment.
+        We don't follow the room. We enter it.
     </p>
 
 </section>
@@ -486,10 +525,7 @@ footer .copyright {
 </main>
 
 
-
 <div class="polka-divider"></div>
-
-
 
 <footer>
 
