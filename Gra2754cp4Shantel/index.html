@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Responsive Navigation | Shantel Christie, 2026</title>
+	<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style type="text/css">
+body {
+    margin: 0;
+    background-color: lightgreen;
+}
+wrapper {
+    width: 80%;
+    margin: auto;
+    display: block;
+    padding: 20px;
+    background-color: rgba(244,244,244,0.50);
+}
+section {
+    height: 500px;
+}
+nav {
+    background-color: darkgreen;
+}
+ul {
+    padding: 0;
+    margin: 0;
+}
+nav ul a {
+    color: rgba(246,242,242,1.00);
+    text-decoration: none;
+}
+ul a li {
+    padding: 15px;
+    list-style-type: none;
+    border-bottom: thin solid rgba(248,242,242,1.00);
+}
+ul a li:hover {
+    background-color: skyblue;
+}
+	.topnav.responsive a{
+    display:block;
+}
+.topnav.responsive a:not(:first-child) {
+     display: none;
+}
+	.topnav .fa-bars {
+    display: none;
+}
+.topnav .fa-times {
+    display: block;
+}
+.topnav.responsive .fa-bars {
+    display: block;
+}
+.topnav.responsive .fa-times {
+    display: none;
+}
+#myTopnav a {
+    padding: 15px;
+    color: white;
+}
+#myTopnav {
+    padding: 5px;
+}
+	@media (min-width:600px) {
+.topnav a:not(:first-child),.topnav.responsive a:not(:first-child) {
+    display:inline-block;
+     }
+.topnav .fa.fa-bars {
+     display:none;
+     }
+</style>
+	<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+		
+</script>
+</head>
+
+<body>
+<wrapper>
+  <header>
+    <h1>Name of Website</h1>
+    <nav class="topnav" id="myTopnav">
+		<a href="javascript:void(0);" class="icon"
+     onclick="myFunction()">
+  <i class="fa fa-bars"></i><i class="fa fa-times"></i>
+      <ul>
+        <a href="#home"><li>Home</li></a>
+        <a href="#services"><li>Services</li></a>
+        <a href="#contact"><li>Contact</li></a>
+      </ul>
+		</a>
+    </nav>
+    <main>
+      <section id="home">
+        <h2>Home</h2>
+      </section>
+      <section id="services">
+        <h2>Services</h2>
+      </section>
+      <section id="contact">
+        <h2>Contact</h2>
+      </section>
+    </main>
+    <footer></footer>
+  </header>
+</wrapper>
+</body>
+</html>
