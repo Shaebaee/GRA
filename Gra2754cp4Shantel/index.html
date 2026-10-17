@@ -1,118 +1,550 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Responsive Navigation | Shantel Christie, 2026</title>
-	<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style type="text/css">
-body {
-    margin: 0;
-    background-color: lightgreen;
-}
-wrapper {
-    width: 80%;
-    margin: auto;
-    display: block;
-    padding: 20px;
-    background-color: rgba(244,244,244,0.50);
-}
-section {
-    height: 500px;
-}
-nav {
-    background-color: darkgreen;
-}
-ul {
-    padding: 0;
-    margin: 0;
-}
-nav ul a {
-    color: rgba(246,242,242,1.00);
-    text-decoration: none;
-}
-ul a li {
-    padding: 15px;
-    list-style-type: none;
-    border-bottom: thin solid rgba(248,242,242,1.00);
-}
-ul a li:hover {
-    background-color: skyblue;
-}
-	.topnav.responsive a{
-    display:block;
-}
-.topnav.responsive a:not(:first-child) {
-     display: none;
-}
-	.topnav .fa-bars {
-    display: none;
-}
-.topnav .fa-times {
-    display: block;
-}
-.topnav.responsive .fa-bars {
-    display: block;
-}
-.topnav.responsive .fa-times {
-    display: none;
-}
-#myTopnav a {
-    padding: 15px;
-    color: white;
-}
-#myTopnav {
-    padding: 5px;
-}
-	@media (min-width:600px) {
-.topnav a:not(:first-child),.topnav.responsive a:not(:first-child) {
-    display:inline-block;
-     }
-.topnav .fa.fa-bars {
-     display:none;
-     }
-</style>
-	<script>
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
-		
-</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sunny Side Sunflower Fields | Shantel Christie, 2026</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --green: #254d35;
+      --sage: #e7eed9;
+      --yellow: #f5c842;
+      --cream: #fffaf0;
+      --ink: #24392c;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--sage);
+      color: var(--ink);
+      font-family: 'DM Sans', Arial, sans-serif;
+    }
+
+    .wrapper {
+      max-width: 1120px;
+      margin: auto;
+      background: var(--cream);
+      min-height: 100vh;
+      box-shadow: 0 12px 50px #254d3514;
+    }
+
+
+    .site-header {
+      background: var(--green);
+      padding: 18px clamp(20px, 4vw, 48px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      position: relative;
+    }
+
+    .brand {
+      color: var(--yellow);
+      text-decoration: none;
+      font: 700 clamp(1.5rem, 3vw, 2rem) 'Playfair Display', Georgia, serif;
+      white-space: nowrap;
+    }
+
+    .topnav {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .topnav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 12px 16px;
+      border-radius: 30px;
+    }
+
+    .topnav a:hover,
+    .topnav a:focus-visible {
+      background: var(--yellow);
+      color: var(--green);
+    }
+
+    .menu-toggle {
+      display: none;
+      border: 0;
+      background: transparent;
+      color: white;
+      font-size: 1.7rem;
+      cursor: pointer;
+    }
+
+    /* GENERAL SECTIONS */
+
+    section {
+      padding: 65px clamp(22px, 5vw, 65px);
+      scroll-margin-top: 20px;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 5vw, 4.7rem);
+      line-height: 1.12;
+      margin: 12px 0 20px;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 3vw, 2.8rem);
+      margin: 0 0 16px;
+    }
+
+    p {
+      line-height: 1.7;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      font-size: .8rem;
+      font-weight: 700;
+      color: #61783e;
+    }
+
+    /* HOME */
+
+    #home {
+      min-height: 540px;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(90deg, rgba(16,48,29,.85), rgba(16,48,29,.17)),
+        url('https://images.unsplash.com/photo-1597848212624-e6e4e9f3b3a9?auto=format&fit=crop&w=1800&q=85')
+        center/cover;
+      color: white;
+    }
+
+    .hero-copy {
+      max-width: 600px;
+    }
+
+    #home .eyebrow {
+      color: #ffe28b;
+    }
+
+    .hero-copy p {
+      font-size: 1.1rem;
+      max-width: 460px;
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--yellow);
+      color: var(--green);
+      text-decoration: none;
+      padding: 14px 24px;
+      border-radius: 40px;
+      font-weight: 700;
+      margin-top: 12px;
+    }
+
+    .button:hover {
+      background: #ffe58a;
+    }
+
+    /* SERVICES */
+
+    .intro {
+      max-width: 700px;
+      margin: 0 auto 34px;
+      text-align: center;
+    }
+
+    #services {
+      background: var(--cream);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 22px #254d3511;
+    }
+
+    .card img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card-content {
+      padding: 22px;
+    }
+
+    .card h3 {
+      font-size: 1.4rem;
+      margin: 0 0 8px;
+    }
+
+    .card p {
+      margin: 0;
+      color: #586556;
+    }
+
+    /* CONTACT */
+
+    #contact {
+      background: #e8efdc;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 45px;
+    }
+
+    .contact-form {
+      display: grid;
+      gap: 12px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      border: 1px solid #b9c9ae;
+      border-radius: 8px;
+      padding: 12px;
+      font: inherit;
+      background: white;
+    }
+
+    .contact-form button {
+      cursor: pointer;
+      border: 0;
+      background: var(--green);
+      color: white;
+      padding: 14px 20px;
+      border-radius: 30px;
+      font-weight: 700;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: var(--green);
+      color: white;
+      padding: 25px;
+      text-align: center;
+      font-size: .9rem;
+    }
+
+    /* RESPONSIVE NAVIGATION */
+
+    @media (max-width: 700px) {
+      .site-header {
+        flex-wrap: wrap;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .topnav {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        flex-basis: 100%;
+        width: 100%;
+        gap: 0;
+      }
+
+      .topnav.responsive {
+        display: flex;
+      }
+
+      .topnav a {
+        border-radius: 6px;
+      }
+
+      #home {
+        min-height: 510px;
+        background-position: center;
+      }
+
+      .cards,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding-block: 50px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-<wrapper>
-  <header>
-    <h1>Name of Website</h1>
-    <nav class="topnav" id="myTopnav">
-		<a href="javascript:void(0);" class="icon"
-     onclick="myFunction()">
-  <i class="fa fa-bars"></i><i class="fa fa-times"></i>
-      <ul>
-        <a href="#home"><li>Home</li></a>
-        <a href="#services"><li>Services</li></a>
-        <a href="#contact"><li>Contact</li></a>
-      </ul>
-		</a>
+
+<div class="wrapper">
+
+  <header class="site-header">
+
+    <a class="brand" href="#home">🌻 Sunny Side</a>
+
+    <button
+      class="menu-toggle"
+      onclick="myFunction()"
+      aria-label="Toggle navigation"
+      aria-expanded="false"
+      aria-controls="myTopnav">
+      ☰
+    </button>
+
+    <nav class="topnav" id="myTopnav" aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
     </nav>
-    <main>
-      <section id="home">
-        <h2>Home</h2>
-      </section>
-      <section id="services">
-        <h2>Services</h2>
-      </section>
-      <section id="contact">
-        <h2>Contact</h2>
-      </section>
-    </main>
-    <footer></footer>
+
   </header>
-</wrapper>
+
+  <main>
+
+   
+    <section id="home">
+
+      <div class="hero-copy">
+
+        <span class="eyebrow">Welcome to the sunny side</span>
+
+        <h1>Where Golden Memories Bloom.</h1>
+
+        <p>
+          Wander through fields of sunshine,
+          pick your favorite blooms, and make
+          memories worth keeping.
+        </p>
+
+        <a class="button" href="#services">
+          Explore Our Experiences →
+        </a>
+
+      </div>
+
+    </section>
+
+   
+    <section id="services">
+
+      <div class="intro">
+
+        <span class="eyebrow">A little sunshine for everyone</span>
+
+        <h2>Our Experiences</h2>
+
+        <p>
+          From golden-hour portraits to handpicked
+          bouquets, there's something special
+          waiting in the fields.
+        </p>
+
+      </div>
+
+      <div class="cards">
+
+        
+        <article class="card">
+
+          <img
+            src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=900&q=85"
+            alt="Golden sunlit field">
+
+          <div class="card-content">
+
+            <h3>Photoshoots</h3>
+
+            <p>
+              Capture your best moments with stunning
+              natural backdrops for couples,
+              families, and more.
+            </p>
+
+          </div>
+        </article>
+
+        
+        <article class="card">
+
+          <img
+            src="sunflower.jpg.webp">
+
+          <div class="card-content">
+
+            <h3>Sunflower Picking</h3>
+
+            <p>
+              Stroll through rows of blooms and
+              create a beautiful sunflower bouquet
+              to take home.
+            </p>
+
+          </div>
+        </article>
+
+        
+        <article class="card">
+
+          <img
+            src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=900&q=85"
+            alt="Flowers arranged for a special occasion">
+
+          <div class="card-content">
+
+            <h3>Special Events</h3>
+
+            <p>
+              Celebrate with sunset picnics,
+              birthdays, proposals, and
+              seasonal farm events.
+            </p>
+
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    
+    <section id="contact">
+
+      <div class="contact-grid">
+
+        <div>
+
+          <span class="eyebrow">
+            We'd love to hear from you
+          </span>
+
+          <h2>Say Hello, Sunshine!</h2>
+
+          <p>
+            Have a question about visiting,
+            booking a photoshoot, or planning
+            an event? Send us a note!
+          </p>
+
+          <p>
+            <strong>Sunny Side Sunflower Fields</strong>
+            <br>
+            Open seasonally • Farm visits by reservation
+          </p>
+			<h3>📍 Visit Us</h3>
+  <p>
+    123 Sunflower Lane<br>
+    Homestead, FL 33030
+  </p>
+			<h3>🕒 Farm Hours</h3>
+  <p>
+    Monday – Friday: 9 AM – 5 PM<br>
+    Saturday – Sunday: 8 AM – 6 PM
+  </p>
+
+        </div>
+
+        <form class="contact-form"
+          onsubmit="event.preventDefault(); alert('This is a sample form for a class project.');">
+
+          <input
+            type="text"
+            name="name"
+            placeholder="Your name"
+            aria-label="Your name"
+            required>
+
+          <input
+            type="email"
+            name="email"
+            placeholder="Email address"
+            aria-label="Email address"
+            required>
+
+          <textarea
+            name="message"
+            rows="5"
+            placeholder="How can we help?"
+            aria-label="Your message"
+            required></textarea>
+
+          <button type="submit">
+            Send Message →
+          </button>
+
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+  
+  <footer>
+    © 2026 Sunny Side Sunflower Fields
+    • Designed by Shantel Christie
+  </footer>
+
+</div>
+
+
+<script>
+
+function myFunction() {
+
+  const nav = document.getElementById('myTopnav');
+  const toggle = document.querySelector('.menu-toggle');
+
+  const isOpen = nav.classList.toggle('responsive');
+
+  toggle.setAttribute('aria-expanded', String(isOpen));
+  toggle.textContent = isOpen ? '✕' : '☰';
+
+}
+
+document.querySelectorAll('#myTopnav a').forEach(link => {
+
+  link.addEventListener('click', () => {
+
+    document.getElementById('myTopnav')
+      .classList.remove('responsive');
+
+    document.querySelector('.menu-toggle')
+      .setAttribute('aria-expanded', 'false');
+
+    document.querySelector('.menu-toggle')
+      .textContent = '☰';
+
+  });
+
+});
+
+</script>
+
 </body>
 </html>
