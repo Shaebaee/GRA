@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doll Me Up! | Drag & Drop Game</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: 'Trebuchet MS', Arial, sans-serif; color: #592343; background: radial-gradient(circle at top left, #fff9fc, #f6cadd 75%); min-height: 100vh; }
+    header { text-align: center; padding: 30px 16px 10px; }
+    h1 { margin: 0; color: #bd377c; font-size: clamp(2.3rem, 6vw, 4rem); letter-spacing: -2px; text-shadow: 3px 3px #ffe5f2; }
+    .subtitle { margin: 8px 0; font-size: 1rem; }
+    main { max-width: 1000px; margin: auto; padding: 15px 20px 45px; display: grid; grid-template-columns: minmax(230px, 1fr) minmax(250px, .9fr); gap: 25px; align-items: center; }
+    .doll-panel, .closet { background: rgba(255,255,255,.76); padding: 18px; border: 3px solid #fff; border-radius: 24px; box-shadow: 0 10px 30px #bd377c25; }
+    .doll-panel h2, .closet h2 { margin: 0 0 12px; font-size: 1.25rem; text-align: center; }
+    .doll-area { position: relative; width: min(100%, 385px); margin: auto; border: 3px dashed #e897bd; border-radius: 16px; overflow: hidden; background: #fff3f7; }
+    .doll-area.active { border-color: #ad286c; background: #fce0ed; }
+    .doll-base { width: 100%; height: auto; display: block; user-select: none; pointer-events: none; }
+    .placed { display: none; position: absolute; pointer-events: none; }
+    .placed.visible { display: block; }
+    #placed-glasses { width: 31%; left: 34%; top: 13.2%; transform: rotate(-2deg); }
+    #placed-lipstick { width: 9%; left: 45.5%; top: 21.7%; }
+    #placed-purse { width: 22%; left: 66%; top: 49%; transform: rotate(-12deg); }
+    .directions { text-align: center; line-height: 1.5; color: #854666; margin: 14px 0 0; }
+    .accessories { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+    .accessory { min-height: 125px; padding: 12px 5px; border-radius: 15px; background: #fff0f8; border: 2px solid #f6c8de; text-align: center; cursor: grab; display: flex; flex-direction: column; gap: 6px; align-items: center; justify-content: center; font: inherit; color: inherit; }
+    .accessory:hover, .accessory:focus-visible { border-color: #bb4385; background: #ffe0f1; }
+    .accessory img { width: 78%; max-width: 75px; height: 55px; object-fit: contain; pointer-events: none; }
+    .accessory span { font-size: .83rem; font-weight: bold; }
+    .accessory.selected { outline: 3px solid #aa387c; }
+    button.reset { display: block; width: 100%; margin-top: 18px; background: #bd377c; color: #fff; padding: 13px; border: none; border-radius: 14px; font-size: 1rem; font-weight: bold; cursor: pointer; }
+    button.reset:hover { background: #9d235f; }
+    .helper { font-size: .86rem; line-height: 1.5; color: #885675; text-align: center; }
+    footer { text-align: center; padding: 0 15px 22px; color: #945979; font-size: .85rem; }
+    @media (max-width: 690px) { main { grid-template-columns: 1fr; max-width: 460px; } .doll-area { max-width: 310px; } .accessory { min-height: 108px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>💗 Doll Me Up! 💗</h1>
+    <p class="subtitle">A mini Y2K fashion doll styling game</p>
+  </header>
+  <main>
+    <section class="doll-panel">
+      <h2>Meet Your Doll ✨</h2>
+      <div class="doll-area" id="doll-area" ondragover="allowDrop(event)" ondragleave="leaveDrop(event)" ondrop="drop(event)" aria-label="Drop accessories on the doll">
+        <img class="doll-base" src="images/doll.png" alt="Fashion doll with brown highlighted hair wearing a pink outfit and matching boots">
+        <img class="placed" id="placed-glasses" src="images/sunglasses.svg" alt="Sunglasses on doll">
+        <img class="placed" id="placed-lipstick" src="images/lips.svg" alt="Lipstick on doll">
+        <img class="placed" id="placed-purse" src="images/purse.svg" alt="Purse on doll">
+      </div>
+      <p class="directions" id="status" aria-live="polite">Drag an accessory onto the doll to give her a glow-up!</p>
+    </section>
+    <section class="closet">
+      <h2>Her Glam Closet 💋</h2>
+      <div class="accessories">
+        <button class="accessory" draggable="true" ondragstart="drag(event)" onclick="chooseAccessory('glasses')" data-item="glasses" aria-label="Choose sunglasses">
+          <img src="images/sunglasses.svg" alt=""><span>Sunglasses</span>
+        </button>
+        <button class="accessory" draggable="true" ondragstart="drag(event)" onclick="chooseAccessory('lipstick')" data-item="lipstick" aria-label="Choose lipstick">
+          <span style="font-size: 2.7rem" aria-hidden="true">💄</span><span>Lipstick</span>
+        </button>
+        <button class="accessory" draggable="true" ondragstart="drag(event)" onclick="chooseAccessory('purse')" data-item="purse" aria-label="Choose purse">
+          <img src="images/purse.svg" alt=""><span>Purse</span>
+        </button>
+      </div>
+      <p class="helper">Drag and drop to style her. On a phone, tap an accessory, then tap the doll.</p>
+      <button class="reset" onclick="resetDoll()">Start Over ↻</button>
+    </section>
+  </main>
+  <footer>Web Design • HTML5 Drag &amp; Drop • First Draft</footer>
+  <script>
+    // The HTML5 drag-and-drop functions from our class lesson.
+    let chosenItem = null;
+    function drag(event) {
+      const item = event.currentTarget.dataset.item;
+      event.dataTransfer.setData('text/plain', item);
+      event.dataTransfer.effectAllowed = 'copy';
+    }
+    function allowDrop(event) {
+      event.preventDefault();
+      event.currentTarget.classList.add('active');
+    }
+    function leaveDrop(event) {
+      event.currentTarget.classList.remove('active');
+    }
+    function drop(event) {
+      event.preventDefault();
+      event.currentTarget.classList.remove('active');
+      const item = event.dataTransfer.getData('text/plain');
+      addAccessory(item);
+    }
+    function addAccessory(item) {
+      const valid = ['glasses', 'lipstick', 'purse'];
+      if (!valid.includes(item)) return;
+      document.getElementById('placed-' + item).classList.add('visible');
+      document.getElementById('status').textContent = 'Cute! You added ' + (item === 'glasses' ? 'sunglasses' : item) + '! 💖';
+      chosenItem = null;
+      document.querySelectorAll('.accessory').forEach(b => b.classList.remove('selected'));
+    }
+    function chooseAccessory(item) {
+      chosenItem = item;
+      document.querySelectorAll('.accessory').forEach(b => b.classList.toggle('selected', b.dataset.item === item));
+      document.getElementById('status').textContent = 'Now tap the doll to add your ' + item + '!';
+    }
+    document.getElementById('doll-area').addEventListener('click', function () {
+      if (chosenItem) addAccessory(chosenItem);
+    });
+    function resetDoll() {
+      document.querySelectorAll('.placed').forEach(img => img.classList.remove('visible'));
+      document.querySelectorAll('.accessory').forEach(b => b.classList.remove('selected'));
+      chosenItem = null;
+      document.getElementById('status').textContent = 'Drag an accessory onto the doll to give her a glow-up!';
+    }
+  </script>
+</body>
+</html>
